@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!DOCTYPE html>
+    <html>
+
+    <head>
+        <style>
+            .grid-container {
+                display: grid;
+                /* activates grid */
+                grid-template-columns: repeat(3, 100px);
+                /* 3 equal columns */
+                grid-template-rows: 100px;
+                /* 1 row of 100px */
+                gap: 15px;
+                /* space between boxes */
+                background-color: #f0f0f0;
+                padding: 10px;
+            }
+
+            .grid-item {
+                background-color: lightcoral;
+                text-align: center;
+                line-height: 100px;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <h2>Grid Example</h2>
+        <div class="grid-container">
+            <div class="grid-item">Box 1</div>
+            <div class="grid-item">Box 2</div>
+            <div class="grid-item">Box 3</div>
+        </div>
+
+    </body>
+
+    </html>
+
+</body>
+
+</html>

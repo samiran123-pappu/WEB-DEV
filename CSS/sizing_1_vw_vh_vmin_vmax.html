@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Viewport Units Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 40px;
+    }
+
+    .box {
+      display: inline-block;
+      width: 40%;
+      margin: 10px;
+      padding: 20px;
+      color: white;
+      border-radius: 10px;
+    }
+
+    .vw {
+      background-color: #4CAF50;
+      font-size: 5vw; /* 5% of viewport width */
+    }
+
+    .vh {
+      background-color: #2196F3;
+      font-size: 5vh; /* 5% of viewport height */
+    }
+
+    .vmin {
+      background-color: #FF9800;
+      font-size: 5vmin; /* 5% of smaller dimension */
+    }
+
+    .vmax {
+      background-color: #E91E63;
+      font-size: 5vmax; /* 5% of larger dimension */
+    }
+
+    .info {
+      margin-top: 40px;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Viewport Units: vw, vh, vmin, vmax</h1>
+
+  <div class="box vw">This is 5vw → depends on viewport <b>width</b></div>
+  <div class="box vh">This is 5vh → depends on viewport <b>height</b></div>
+  <div class="box vmin">This is 5vmin → depends on <b>smaller</b> side</div>
+  <div class="box vmax">This is 5vmax → depends on <b>larger</b> side</div>
+
+  <div class="info">
+    💡 Try resizing the window:  
+    - Make it tall and narrow — <b>vmin</b> shrinks, <b>vmax</b> grows.  
+    - Make it wide and short — <b>vmin</b> grows, <b>vmax</b> shrinks.  
+    - <b>vw</b> changes only with width, <b>vh</b> only with height.
+  </div>
+</body>
+</html>
+

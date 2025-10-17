@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Border Styles in CSS</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7f9fc;
+      padding: 30px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+      margin-bottom: 30px;
+    }
+
+    .border-box {
+      width: 220px;
+      height: 80px;
+      line-height: 80px;
+      text-align: center;
+      margin: 15px;
+      background: white;
+      display: inline-block;
+      border-width: 5px;
+      font-weight: bold;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    /* Different border styles */
+    .solid   { border: 5px solid #3498db; }
+    .dashed  { border: 5px dashed #e67e22; }
+    .dotted  { border: 5px dotted #9b59b6; }
+    .double  { border: 5px double #2ecc71; }
+    .groove  { border: 5px groove #f39c12; }
+    .ridge   { border: 5px ridge #e74c3c; }
+    .inset   { border: 5px inset #16a085; }
+    .outset  { border: 5px outset #8e44ad; }
+
+    /* Rounded corner example */
+    .radius  { border: 5px solid #34495e; border-radius: 15px; }
+
+    /* Border + shadow */
+    .shadow  { border: 5px solid #1abc9c; box-shadow: 5px 5px 10px rgba(0,0,0,0.2); }
+
+    /* Outline example */
+    .outline {
+      border: 3px solid #2980b9;
+      outline: 3px dashed #f39c12;
+      outline-offset: 6px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <h1>CSS Border Styles Demo</h1>
+
+  <div class="border-box solid">Solid</div>
+  <div class="border-box dashed">Dashed</div>
+  <div class="border-box dotted">Dotted</div>
+  <div class="border-box double">Double</div>
+  <div class="border-box groove">Groove</div>
+  <div class="border-box ridge">Ridge</div>
+  <div class="border-box inset">Inset</div>
+  <div class="border-box outset">Outset</div>
+  <div class="border-box radius">Rounded</div>
+  <div class="border-box shadow">Shadow</div>
+  <div class="border-box outline">Outline</div>
+
+</body>
+</html>

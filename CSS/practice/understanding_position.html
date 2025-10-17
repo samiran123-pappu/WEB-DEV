@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Position Examples</title>
+
+  <style>
+    /* 🔹 Basic Page Setup */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      height: 200vh; /* Allows scrolling */
+      background-color: #f5f5f5;
+    }
+
+    h2 {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    /* 🔹 Container */
+    .container {
+      width: 80vw;
+      height: auto;
+      min-height: 150vh;
+      border: 3px solid red;
+      margin: 40px auto;
+      padding: 15px;
+      position: relative; /* Important: makes .absolute box stay inside */
+      background-color: #fff;
+    }
+
+    /* 🔹 Absolute box — positioned inside the container */
+    .box1 {
+      font-size: 1.2em;
+      width: 25vw;
+      height: 17vh;
+      border: 2px solid red;
+      background-color: aqua;
+      position: absolute;
+      left: 25vw;
+      top: 10vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* 🔹 Fixed box — stays fixed to viewport */
+    .ad {
+      border: 2px solid green;
+      background-color: blue;
+      color: white;
+      height: 45px;
+      width: 30vw;
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    /* 🔹 Sticky box — sticks after you scroll past it */
+    .sticky {
+      width: 20vw;
+      height: 8vh;
+      border: 2px solid black;
+      background-color: yellow;
+      color: black;
+      font-weight: bold;
+      position: sticky;
+      top: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 10px;
+      z-index: 1;
+    }
+
+    /* 🔹 Long text to make scrolling visible */
+    .content {
+      font-size: 0.9em;
+      text-align: justify;
+      margin-top: 20px;
+      line-height: 1.5em;
+    }
+  </style>
+</head>
+
+<body>
+  <h2>Understanding CSS Positions: Static, Relative, Absolute, Fixed & Sticky</h2>
+
+  <div class="container">
+    <div class="box1">Absolute Box (Inside Container)</div>
+
+    <div class="sticky">Sticky Box (Sticks on Scroll)</div>
+
+    <div class="content">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur libero
+      doloremque minus repellendus, amet molestiae explicabo! Possimus cumque, in
+      molestias labore sequi aperiam repellat eius obcaecati saepe quos aliquam
+      minima. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum
+      incidunt reprehenderit porro ipsa cumque. Asperiores, fuga! Numquam sunt,
+      illum eius cum dolor deserunt aliquid! Ducimus corporis neque veniam ipsa.
+      Minima exercitationem temporibus eveniet iure, dolorem nobis tempore
+      inventore dolorum veniam officiis, tempora obcaecati magnam accusantium.
+      Voluptate debitis adipisci aliquid, ipsum quia voluptates, nihil
+      laboriosam, ab dolores iste porro tempore.
+    </div>
+
+    <div class="content">
+      More scrolling text here... keep scrolling to see how the sticky box
+      remains at the top until this container scrolls past it.
+    </div>
+  </div>
+
+  <div class="ad">Fixed Box (Always on Screen)</div>
+
+</body>
+
+</html>

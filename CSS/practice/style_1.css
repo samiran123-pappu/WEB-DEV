@@ -1,0 +1,143 @@
+body {
+  font-family: "Roboto", sans-serif;
+  padding: 20px;
+  line-height: 1.6;
+  color: black;
+  letter-spacing: 0.5px;
+  word-spacing: 1px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.container {
+  border: 2px solid #ccc;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+/* % Example */
+.percent-parent {
+  font-size: 20px;
+  background-color: #f0f8ff;
+}
+
+.percent-child {
+  font-size: 150%;
+  color: #0066cc;
+  border: 2px solid red;
+  padding: 23px;
+  background-color: aqua;
+  margin: 23px;
+}
+
+/* em Example */
+.em-parent {
+  font-size: 20px;
+  background-color: #fff7e6;
+}
+
+.em-child {
+  font-size: 2em;
+  color: #ff9900;
+  border: 2px solid red;
+  padding: 23px;
+  background-color: aqua;
+  margin: 23px;
+}
+
+/* rem Example */
+.rem-parent {
+  font-size: 20px;
+  background-color: #fce4ec;
+}
+
+.rem-child {
+  font-size: 1.5rem;
+  color: #e91e63;
+  border: 2px solid red;
+  padding: 23px;
+  background-color: aqua;
+  margin: 23px;
+}
+
+/* Absolute Units */
+.unit p {
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 8px;
+  color: white;
+  border: 2px solid black;
+}
+
+.px { background-color: #2196F3; font-size: 24px; }
+.pt { background-color: #4CAF50; font-size: 18pt; }
+.cm { background-color: #FF9800; font-size: 1cm; }
+.mm { background-color: #9C27B0; font-size: 10mm; }
+.in { background-color: #E91E63; font-size: 0.5in; }
+
+/* Viewport Units */
+.box {
+  display: inline-block;
+  width: 40%;
+  margin: 10px;
+  padding: 20px;
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+  border: 3px solid black;
+}
+
+.vw { background-color: #4CAF50; font-size: 5vw; }
+.vh { background-color: #2196F3; font-size: 5vh; }
+.vmin { background-color: #FF9800; font-size: 5vmin; }
+.vmax { background-color: #E91E63; font-size: 5vmax; }
+
+/* Flexbox */
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  height: 200px;
+  background-color: #f0f0f0;
+  border: 2px solid black;
+}
+
+/* Grid */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: 100px;
+  gap: 15px;
+  background-color: #f0f0f0;
+  padding: 10px;
+  border: 2px solid black;
+}
+
+.grid-item {
+  background-color: lightcoral;
+  text-align: center;
+  line-height: 100px;
+  font-weight: bold;
+}
+
+/* Box Model */
+.box-example {
+  width: 400px;
+  padding: 20px;
+  border: 10px solid black;
+  margin: 20px;
+  box-sizing: border-box;
+  background-color: #cce5ff;
+}
+
+/* Notes */
+.note {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 18px;
+}

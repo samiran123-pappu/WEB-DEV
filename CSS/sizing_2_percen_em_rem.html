@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>% vs em vs rem Example</title>
+  <style>
+    html {
+      font-size: 16px; /* root font size */
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      line-height: 1.5;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .container {
+      border: 2px solid #ccc;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 30px;
+    }
+
+    .container h2 {
+      margin-top: 0;
+    }
+
+    /* % Example */
+    .percent-parent {
+      font-size: 20px; /* parent size */
+      background-color: #f0f8ff;
+    }
+
+    .percent-child {
+      font-size: 150%; /* 150% of parent font size (20px × 1.5 = 30px) */
+      color: #0066cc;
+    }
+
+    /* em Example */
+    .em-parent {
+      font-size: 20px;
+      background-color: #fff7e6;
+    }
+
+    .em-child {
+      font-size: 2em; /* 2 × parent font size (20px × 2 = 40px) */
+      color: #ff9900;
+    }
+
+    /* rem Example */
+    .rem-parent {
+      font-size: 20px;
+      background-color: #fce4ec;
+    }
+
+    .rem-child {
+      font-size: 1.5rem; /* 1.5 × root (html) font size (16px × 1.5 = 24px) */
+      color: #e91e63;
+    }
+
+    .note {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Understanding %, em, and rem</h1>
+
+  <div class="container percent-parent">
+    <h2>% Example</h2>
+    <p>Parent font size: <b>20px</b></p>
+    <p class="percent-child">Child font size: <b>150%</b> → 20px × 1.5 = 30px</p>
+  </div>
+
+  <div class="container em-parent">
+    <h2>em Example</h2>
+    <p>Parent font size: <b>20px</b></p>
+    <p class="em-child">Child font size: <b>2em</b> → 20px × 2 = 40px</p>
+  </div>
+
+  <div class="container rem-parent">
+    <h2>rem Example</h2>
+    <p>Root (html) font size: <b>16px</b></p>
+    <p class="rem-child">Child font size: <b>1.5rem</b> → 16px × 1.5 = 24px</p>
+  </div>
+
+  <div class="note">
+    💡 Try changing <code>html { font-size: 16px; }</code> or each parent’s size in CSS to see how each unit reacts.
+  </div>
+</body>
+</html>
