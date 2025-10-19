@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex_Box</title>
+    <style>
+        .container {
+            width: 80vw;
+            height: 90vh;
+            border: 2px solid red;
+            padding: 6px;
+            display: flex;
+            flex-direction: column;
+            /* flex-direction: column-reverse; */
+            /* flex-direction: row; */
+            /* flex-direction: row-reverse; */
+            justify-content: center;
+            /* justify-content: flex-start; */
+            /* justify-content: flex-end; */
+            /* justify-content: space-around; */
+            /* justify-content: space-between; */
+
+            /* align-items: center; */
+            /* align-items: flex-start; */
+            /* align-items: flex-end; */
+            /* align-items: center; */
+            /* align-items: stretch; */
+            /* align-items: baseline; */
+        }
+
+        .box1,
+        .box2,
+        .box3,
+        .box4,
+        .box5 {
+            /* Removed fixed width (so stretch can work horizontally) */
+            /* width: 9vw; ❌ */
+            height: 9vh;
+            border: 2px solid green;
+            margin: 5px;
+            background-color: lightcoral;
+        }
+
+        .box1 {
+            background-color: brown;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box1">BOX_1</div>
+        <div class="box2">BOX_2</div>
+        <div class="box3">BOX_3</div>
+        <div class="box4">BOX_4</div>
+        <div class="box5">BOX_5</div>
+    </div>
+</body>
+
+</html>

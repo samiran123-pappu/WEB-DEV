@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Variables Demo - GPT Edition</title>
+  <style>
+    /* 🌱 Root-level variables (Global defaults) */
+    :root {
+      --primary-color: #e74c3c;
+      --secondary-color: #f1c40f;
+      --text-color: #2c3e50;
+      --bg-color: #ecf0f1;
+
+      --btn-bg: #2ecc71;
+      --btn-color: #fff;
+      --btn-padding: 12px 24px;
+      --btn-radius: 12px;
+    }
+
+    /* 🎯 Container styling */
+    .container {
+      width: 800px;
+      margin: 40px auto;
+      border: 8px solid var(--primary-color);
+      background-color: var(--bg-color);
+      padding: 20px;
+      border-radius: 16px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    /* 📦 Box styling (inherits global vars unless overridden) */
+    .box {
+      width: 120px;
+      margin: 15px;
+      padding: 12px;
+      border: 3px solid var(--primary-color);
+      background-color: var(--secondary-color);
+      color: var(--text-color);
+      font-weight: bold;
+      text-align: center;
+      border-radius: 10px;
+      display: inline-block;
+      transition: all 0.3s ease-in-out;
+    }
+
+    /* 🟢 Hover effect using same variables */
+    .box:hover {
+      background-color: var(--primary-color);
+      color: white;
+      transform: scale(1.1);
+    }
+
+    /* 🎨 Example of local variable override */
+    #box2 {
+      --bg-color: #121212;
+      --text-color: #ffffff;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+    }
+
+    /* 🔵 Another override example */
+    #box7 {
+      --border-radius: 20px;
+      border-radius: var(--border-radius);
+      background-color: #9b59b6;
+      color: white;
+    }
+
+    /* 🧭 Heading style (with fallback variable) */
+    h1 {
+      text-align: center;
+      color: var(--heading-color, #2980b9);
+    }
+
+    /* 🔘 Button using CSS variable theme */
+    .button {
+      display: inline-block;
+      margin: 20px auto;
+      padding: var(--btn-padding);
+      color: var(--btn-color);
+      background-color: var(--btn-bg);
+      border: none;
+      border-radius: var(--btn-radius);
+      cursor: pointer;
+      font-size: 16px;
+      transition: all 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: var(--primary-color);
+      transform: translateY(-2px);
+    }
+
+    /* 🦶 Footer */
+    footer {
+      text-align: center;
+      margin-top: 30px;
+      color: #555;
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>🎨 CSS Variables — GPT Styled</h1>
+
+  <div style="text-align:center;">
+    <button class="button">Click Me</button>
+  </div>
+
+  <div class="container">
+    <div class="box">Box 1</div>
+    <div class="box" id="box2">Box 2</div>
+    <div class="box">Box 3</div>
+    <div class="box">Box 4</div>
+    <div class="box">Box 5</div>
+    <div class="box">Box 6</div>
+    <div class="box" id="box7">Box 7</div>
+  </div>
+
+  <footer>
+    © 2025 | All Rights Reserved
+  </footer>
+</body>
+
+</html>

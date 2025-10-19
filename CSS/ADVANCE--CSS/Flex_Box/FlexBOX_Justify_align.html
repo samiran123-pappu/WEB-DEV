@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexbox — Justify, Align & Direction Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f4f8;
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 50px;
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: #333;
+    }
+
+    .section {
+      width: 90%;
+    }
+
+    .container {
+      width: 80vw;
+      height: 35vh;
+      border: 3px dashed #ff4d4d;
+      display: flex;
+      background-color: white;
+      padding: 10px;
+      margin: 20px auto;
+    }
+
+    .box {
+      width: 80px;
+      height: 80px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-weight: bold;
+      border-radius: 10px;
+    }
+
+    .b1 { background-color: #ff7675; }
+    .b2 { background-color: #74b9ff; }
+    .b3 { background-color: #55efc4; }
+    .b4 { background-color: #fdcb6e; }
+    .b5 { background-color: #a29bfe; }
+
+    /* --- JUSTIFY CONTENT --- */
+    .jc-flex-start { justify-content: flex-start; }
+    .jc-flex-end { justify-content: flex-end; }
+    .jc-center { justify-content: center; }
+    .jc-space-between { justify-content: space-between; }
+    .jc-space-around { justify-content: space-around; }
+    .jc-space-evenly { justify-content: space-evenly; }
+
+    /* --- ALIGN ITEMS --- */
+    .ai-flex-start { align-items: flex-start; }
+    .ai-flex-end { align-items: flex-end; }
+    .ai-center { align-items: center; }
+    .ai-baseline { align-items: baseline; }
+    .ai-stretch { align-items: stretch; }
+
+    /* --- FLEX DIRECTION --- */
+    .fd-row { flex-direction: row; }
+    .fd-row-reverse { flex-direction: row-reverse; }
+    .fd-column { flex-direction: column; }
+    .fd-column-reverse { flex-direction: column-reverse; }
+
+    /* Make column boxes taller to visualize better */
+    .tall .box {
+      width: 12vw;
+      height: 12vh;
+      font-size: 1.3em;
+    }
+
+    p {
+      text-align: center;
+      margin-top: -10px;
+      font-size: 1.1em;
+      color: #444;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>🎯 Full Flexbox Visual Demo</h1>
+
+  <!-- ===================================== -->
+  <!-- SECTION 1: JUSTIFY-CONTENT PROPERTIES -->
+  <!-- ===================================== -->
+  <div class="section">
+    <h2>1️⃣ JUSTIFY-CONTENT (Main Axis)</h2>
+
+    <div class="container jc-flex-start">
+      <div class="box b1">1</div>
+      <div class="box b2">2</div>
+      <div class="box b3">3</div>
+    </div>
+    <p>justify-content: flex-start;</p>
+
+    <div class="container jc-flex-end">
+      <div class="box b1">1</div>
+      <div class="box b2">2</div>
+      <div class="box b3">3</div>
+    </div>
+    <p>justify-content: flex-end;</p>
+
+    <div class="container jc-center">
+      <div class="box b1">1</div>
+      <div class="box b2">2</div>
+      <div class="box b3">3</div>
+    </div>
+    <p>justify-content: center;</p>
+
+    <div class="container jc-space-between">
+      <div class="box b1">1</div>
+      <div class="box b2">2</div>
+      <div class="box b3">3</div>
+    </div>
+    <p>justify-content: space-between;</p>
+
+    <div class="container jc-space-around">
+      <div class="box b1">1</div>
+      <div class="box b2">2</div>
+      <div class="box b3">3</div>
+    </div>
+    <p>justify-content: space-around;</p>
+
+    <div class="container jc-space-evenly">
+      <div class="box b1">1</div>
+      <div class="box b2">2</div>
+      <div class="box b3">3</div>
+    </div>
+    <p>justify-content: space-evenly;</p>
+  </div>
+
+  <!-- ================================== -->
+  <!-- SECTION 2: ALIGN-ITEMS PROPERTIES -->
+  <!-- ================================== -->
+  <div class="section">
+    <h2>2️⃣ ALIGN-ITEMS (Cross Axis)</h2>
+
+    <div class="container ai-flex-start">
+      <div class="box b1" style="font-size: 16px;">1</div>
+      <div class="box b2" style="font-size: 22px;">2</div>
+      <div class="box b3" style="font-size: 28px;">3</div>
+    </div>
+    <p>align-items: flex-start;</p>
+
+    <div class="container ai-flex-end">
+      <div class="box b1" style="font-size: 16px;">1</div>
+      <div class="box b2" style="font-size: 22px;">2</div>
+      <div class="box b3" style="font-size: 28px;">3</div>
+    </div>
+    <p>align-items: flex-end;</p>
+
+    <div class="container ai-center">
+      <div class="box b1" style="font-size: 16px;">1</div>
+      <div class="box b2" style="font-size: 22px;">2</div>
+      <div class="box b3" style="font-size: 28px;">3</div>
+    </div>
+    <p>align-items: center;</p>
+
+    <div class="container ai-baseline">
+      <div class="box b1" style="font-size: 16px;">1</div>
+      <div class="box b2" style="font-size: 22px;">2</div>
+      <div class="box b3" style="font-size: 28px;">3</div>
+    </div>
+    <p>align-items: baseline;</p>
+
+    <div class="container ai-stretch">
+      <div class="box b1" style="height: auto;">1</div>
+      <div class="box b2" style="height: auto;">2</div>
+      <div class="box b3" style="height: auto;">3</div>
+    </div>
+    <p>align-items: stretch;</p>
+  </div>
+
+  <!-- ================================= -->
+  <!-- SECTION 3: FLEX-DIRECTION TYPES -->
+  <!-- ================================= -->
+  <div class="section">
+    <h2>3️⃣ FLEX-DIRECTION (Axis Direction)</h2>
+
+    <div class="container fd-row">
+      <div class="box b1">A</div>
+      <div class="box b2">B</div>
+      <div class="box b3">C</div>
+    </div>
+    <p>flex-direction: row; (default — left to right)</p>
+
+    <div class="container fd-row-reverse">
+      <div class="box b1">A</div>
+      <div class="box b2">B</div>
+      <div class="box b3">C</div>
+    </div>
+    <p>flex-direction: row-reverse; (right to left)</p>
+
+    <div class="container fd-column tall">
+      <div class="box b1">A</div>
+      <div class="box b2">B</div>
+      <div class="box b3">C</div>
+    </div>
+    <p>flex-direction: column; (top to bottom)</p>
+
+    <div class="container fd-column-reverse tall">
+      <div class="box b1">A</div>
+      <div class="box b2">B</div>
+      <div class="box b3">C</div>
+    </div>
+    <p>flex-direction: column-reverse; (bottom to top)</p>
+  </div>
+
+</body>
+
+</html>

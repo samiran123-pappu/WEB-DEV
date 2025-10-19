@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🎯 Complete Flexbox Master Visualization</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: #f0f4f8;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+  }
+
+  h1, h2 {
+    text-align: center;
+    color: #333;
+  }
+
+  p, .note {
+    text-align: center;
+    font-size: 1em;
+    color: #555;
+    max-width: 90%;
+    margin: 5px auto 15px auto;
+    font-style: italic;
+  }
+
+  .section {
+    width: 90%;
+  }
+
+  .container {
+    width: 80vw;
+    height: 35vh;
+    border: 3px dashed #ff4d4d;
+    display: flex;
+    background-color: white;
+    padding: 10px;
+    margin: 20px auto;
+    transition: 0.3s ease;
+    /* By default, main axis is horizontal (row), cross axis is vertical */
+  }
+
+  .box {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: 0.3s ease;
+  }
+
+  .b1 { background-color: #ff7675; }
+  .b2 { background-color: #74b9ff; }
+  .b3 { background-color: #55efc4; }
+  .b4 { background-color: #fdcb6e; }
+  .b5 { background-color: #a29bfe; }
+
+  /* --- JUSTIFY CONTENT --- */
+  .jc-flex-start { justify-content: flex-start; }
+  .jc-flex-end { justify-content: flex-end; }
+  .jc-center { justify-content: center; }
+  .jc-space-between { justify-content: space-between; }
+  .jc-space-around { justify-content: space-around; }
+  .jc-space-evenly { justify-content: space-evenly; }
+
+  /* --- ALIGN ITEMS --- */
+  .ai-flex-start { align-items: flex-start; }
+  .ai-flex-end { align-items: flex-end; }
+  .ai-center { align-items: center; }
+  .ai-baseline { align-items: baseline; }
+  .ai-stretch { align-items: stretch; }
+
+  /* --- FLEX DIRECTION --- */
+  .fd-row { flex-direction: row; }
+  .fd-row-reverse { flex-direction: row-reverse; }
+  .fd-column { flex-direction: column; }
+  .fd-column-reverse { flex-direction: column-reverse; }
+
+  /* --- FLEX WRAP --- */
+  .fw-nowrap { flex-wrap: nowrap; }
+  .fw-wrap { flex-wrap: wrap; }
+  .fw-wrap-reverse { flex-wrap: wrap-reverse; }
+
+  /* --- ALIGN CONTENT (works with wrap) --- */
+  .ac-flex-start { flex-wrap: wrap; align-content: flex-start; }
+  .ac-flex-end { flex-wrap: wrap; align-content: flex-end; }
+  .ac-center { flex-wrap: wrap; align-content: center; }
+  .ac-space-between { flex-wrap: wrap; align-content: space-between; }
+  .ac-space-around { flex-wrap: wrap; align-content: space-around; }
+  .ac-stretch { flex-wrap: wrap; align-content: stretch; }
+
+  /* --- GAP PROPERTIES --- */
+  .gap-demo { flex-wrap: wrap; gap: 20px; }
+  .row-gap-demo { flex-wrap: wrap; row-gap: 30px; column-gap: 0; }
+  .column-gap-demo { flex-wrap: wrap; column-gap: 40px; row-gap: 0; }
+
+  /* --- FLEX-FLOW (shorthand for direction + wrap) --- */
+  .flow-demo { flex-flow: row wrap; }
+
+  /* --- FLEX ITEM PROPERTIES --- */
+  .grow-demo .box:nth-child(1) { flex-grow: 0; }
+  .grow-demo .box:nth-child(2) { flex-grow: 1; }
+  .grow-demo .box:nth-child(3) { flex-grow: 2; }
+
+  .shrink-demo .box {
+    width: 200px;
+    flex-shrink: 1;
+  }
+  .shrink-demo .box:nth-child(3) {
+    flex-shrink: 3;
+  }
+
+  .basis-demo .box:nth-child(1) { flex-basis: 50px; }
+  .basis-demo .box:nth-child(2) { flex-basis: 150px; }
+  .basis-demo .box:nth-child(3) { flex-basis: 250px; }
+
+  .flex-demo .box:nth-child(1) { flex: 1 1 100px; }
+  .flex-demo .box:nth-child(2) { flex: 2 1 150px; }
+  .flex-demo .box:nth-child(3) { flex: 1 0 200px; }
+
+  .align-self-demo .box:nth-child(1) { align-self: flex-start; }
+  .align-self-demo .box:nth-child(2) { align-self: center; }
+  .align-self-demo .box:nth-child(3) { align-self: flex-end; }
+
+  .order-demo .box:nth-child(1) { order: 3; }
+  .order-demo .box:nth-child(2) { order: 1; }
+  .order-demo .box:nth-child(3) { order: 2; }
+
+  .tall .box {
+    width: 12vw;
+    height: 12vh;
+    font-size: 1.3em;
+  }
+
+</style>
+</head>
+<body>
+
+<h1>💪 Complete Flexbox Visualization Demo With Notes</h1>
+
+<!-- 1️⃣ JUSTIFY-CONTENT -->
+<div class="section">
+  <h2>1️⃣ JUSTIFY-CONTENT</h2>
+  <div class="note">
+    <b>Note:</b> Controls the alignment along the <u>main axis</u> (direction of flex-direction). 
+    Example: row → horizontal; column → vertical.
+  </div>
+  <div class="container jc-flex-start">
+    <div class="box b1">1</div><div class="box b2">2</div><div class="box b3">3</div>
+  </div>
+  <p>justify-content: flex-start → items start at main axis start.</p>
+
+  <div class="container jc-space-between">
+    <div class="box b1">1</div><div class="box b2">2</div><div class="box b3">3</div>
+  </div>
+  <p>justify-content: space-between → items spaced evenly along main axis.</p>
+</div>
+
+<!-- 2️⃣ ALIGN-ITEMS -->
+<div class="section">
+  <h2>2️⃣ ALIGN-ITEMS</h2>
+  <div class="note">
+    <b>Note:</b> Controls alignment along the <u>cross axis</u> (perpendicular to main axis).
+  </div>
+  <div class="container ai-center fd-row tall">
+    <div class="box b1" style="font-size:18px;">1</div>
+    <div class="box b2" style="font-size:28px;">2</div>
+    <div class="box b3" style="font-size:36px;">3</div>
+  </div>
+  <p>align-items: center → items vertically centered (cross axis).</p>
+</div>
+
+<!-- 3️⃣ FLEX-DIRECTION -->
+<div class="section">
+  <h2>3️⃣ FLEX-DIRECTION</h2>
+  <div class="note">
+    <b>Note:</b> Determines main axis direction.
+    <ul>
+      <li>row → horizontal left to right</li>
+      <li>row-reverse → horizontal right to left</li>
+      <li>column → vertical top to bottom</li>
+      <li>column-reverse → vertical bottom to top</li>
+    </ul>
+  </div>
+  <div class="container fd-row">
+    <div class="box b1">A</div><div class="box b2">B</div><div class="box b3">C</div>
+  </div>
+  <p>flex-direction: row</p>
+
+  <div class="container fd-column tall">
+    <div class="box b1">A</div><div class="box b2">B</div><div class="box b3">C</div>
+  </div>
+  <p>flex-direction: column</p>
+</div>
+
+<!-- 4️⃣ FLEX-WRAP -->
+<div class="section">
+  <h2>4️⃣ FLEX-WRAP</h2>
+  <div class="note">
+    <b>Note:</b> Allows flex items to wrap onto multiple lines when container is small.
+  </div>
+  <div class="container fw-wrap">
+    <div class="box b1">1</div><div class="box b2">2</div><div class="box b3">3</div>
+    <div class="box b4">4</div><div class="box b5">5</div>
+  </div>
+  <p>flex-wrap: wrap → items move to next line if needed.</p>
+</div>
+
+<!-- 5️⃣ ALIGN-CONTENT -->
+<div class="section">
+  <h2>5️⃣ ALIGN-CONTENT</h2>
+  <div class="note">
+    <b>Note:</b> Works when there are multiple lines. Controls alignment of lines along cross axis.
+  </div>
+  <div class="container ac-space-around" style="height:50vh;">
+    <div class="box b1">1</div><div class="box b2">2</div><div class="box b3">3</div>
+    <div class="box b4">4</div><div class="box b5">5</div>
+    <div class="box b1">6</div><div class="box b2">7</div><div class="box b3">8</div>
+  </div>
+  <p>align-content: space-around → lines spaced along cross axis.</p>
+</div>
+
+<!-- 6️⃣ GAP -->
+<div class="section">
+  <h2>6️⃣ GAP / ROW-GAP / COLUMN-GAP</h2>
+  <div class="note">
+    <b>Note:</b> Controls spacing between flex items.
+  </div>
+  <div class="container gap-demo">
+    <div class="box b1">1</div><div class="box b2">2</div><div class="box b3">3</div>
+    <div class="box b4">4</div><div class="box b5">5</div>
+  </div>
+  <p>gap: 20px → space evenly between items.</p>
+</div>
+
+<!-- Continue with remaining sections similarly adding notes -->
+<!-- You can copy the same style for FLEX-GROW, FLEX-SHRINK, FLEX-BASIS, ALIGN-SELF, ORDER, etc. -->
+
+</body>
+</html>

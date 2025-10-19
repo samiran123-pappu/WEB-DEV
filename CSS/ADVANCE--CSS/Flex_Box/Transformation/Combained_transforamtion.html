@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combined Transform</title>
+    <style>
+        .container {
+            background-color: red;
+            width: 450px;
+            height: 70vh;
+        }
+        .box {
+            width: 123px;
+            height: 123px;
+            background-color: beige;
+            margin: 5px;
+            /* Order matters — applied left to right */
+            transform: translateX(100px) rotate(30deg) scale(1.2) skew(10deg, 5deg);
+        }
+    </style>
+</head>
+<body>
+    <header>Applies multiple transforms in order (translate, rotate, scale, skew)</header>
+    <div class="container">
+        <div class="box">Box 1</div>
+    </div>
+</body>
+</html>

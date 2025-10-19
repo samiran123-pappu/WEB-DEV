@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css-Variables</title>
+    <style>
+        :root {
+            --primary-color: red;
+            --primary-color1: yellow;
+            --text-color: blue;
+            --bg-color: darkgreen;
+            --btn-padding1: 12px 24px;
+            --btn-color2: #fff;
+            --btn-bg3: #2ecc71;
+        }
+
+
+        #box2 {
+            --bg-color: #121212;
+            --text-color: #ffffff;
+        }
+
+        #box7 {
+            --border-radius: 10px;
+            border-radius: var(--border-radius);
+        }
+
+        .container {
+            --primary-color2: black;
+            width: 800px;
+            border: 10px solid var(--primary-color2);
+            background-color: blanchedalmond;
+            padding: 10px;
+            margin: 20px;
+        }
+
+        .box {
+            width: 80px;
+            border: 2px solid var(--primary-color);
+            margin: 20px;
+            padding: 10px;
+            background-color: var(--primary-color1);
+            /* color: var(--text-color, red) */
+            color: var(--text-color);
+            background-color: var(--bg-color);
+
+        }
+
+        h1 {
+            color: var(--heading-color, blue);
+        }
+
+        .button {
+            --btn-padding: 12px 24px;
+            --btn-color:blanchedalmond;
+            --btn-bg: blue;
+            padding: var(--btn-padding);
+            color: var(--btn-color);
+            background-color: var(--btn-bg);
+            /* border: none; */
+            border-radius: 16px;
+            /* cursor: pointer; */
+        }
+    </style>
+</head>
+
+<body>
+    <h1> This is a HEADING</h1>
+    <div> <button class="button">Go back </button></div>
+    <div class="container">
+        <div class="box">box1</div>
+        <div class="box" id="box2">box2</div>
+        <div class="box">box3</div>
+        <div class="box">box4</div>
+        <div class="box">box5</div>
+        <div class="box">box6</div>
+        <div class="box" id="box7">box7</div>
+    </div>
+
+
+    <footer>
+        Copyright | All right reserved
+    </footer>
+</body>
+
+</html>

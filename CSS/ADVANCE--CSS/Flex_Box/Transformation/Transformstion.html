@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Transformations Demo</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #2b5876, #4e4376);
+      color: white;
+      text-align: center;
+      padding: 40px;
+    }
+
+    h1 {
+      margin-bottom: 30px;
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      width: 450px;
+      height: 70vh;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      perspective: 800px; /* for 3D transforms */
+    }
+
+    .box {
+      width: 120px;
+      height: 120px;
+      background-color: beige;
+      color: black;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px;
+      transition: all 0.8s ease;
+      transform-origin: center;
+    }
+
+    /* Default */
+    .box:hover {
+      background-color: #ffeb3b;
+    }
+
+    /* Transformations */
+    .translate { transform: translate(100px, 50px); }
+    .rotate    { transform: rotate(45deg); }
+    .scale     { transform: scale(1.5); }
+    .skew      { transform: skew(20deg, 10deg); }
+    .matrix    { transform: matrix(1, 0.5, -0.5, 1, 30, 20); }
+    .rotate3d  { transform: rotateY(45deg) rotateX(20deg); transform-style: preserve-3d; }
+
+    button {
+      margin: 10px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      background-color: #00bcd4;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #0097a7;
+    }
+
+    .buttons {
+      margin-top: 25px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <h1>🎨 CSS Transformations Demo</h1>
+
+  <div class="container">
+    <div class="box" id="myBox">Box</div>
+  </div>
+
+  <div class="buttons">
+    <button onclick="setTransform('translate')">Translate</button>
+    <button onclick="setTransform('rotate')">Rotate</button>
+    <button onclick="setTransform('scale')">Scale</button>
+    <button onclick="setTransform('skew')">Skew</button>
+    <button onclick="setTransform('matrix')">Matrix</button>
+    <button onclick="setTransform('rotate3d')">3D Rotate</button>
+    <button onclick="resetBox()">Reset</button>
+  </div>
+
+  <script>
+    const box = document.getElementById('myBox');
+
+    function setTransform(type) {
+      box.className = 'box ' + type;
+    }
+
+    function resetBox() {
+      box.className = 'box';
+    }
+  </script>
+
+</body>
+</html>

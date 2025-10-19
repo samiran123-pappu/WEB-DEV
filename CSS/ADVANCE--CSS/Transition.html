@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition</title>
+    <style>
+        .container {
+
+            border: 5px solid green;
+            width: 60vw;
+            margin: 20px;
+            /* height:70vh; */
+            background-color: azure;
+            /* padding: 40px; */
+            background-color: darkgrey;
+        }
+
+        .box {
+
+            border: 7px solid yellow;
+            width: 80px;
+            height: 40px;
+            margin: 20px;
+            background-color: blueviolet;
+            color: lawngreen;
+            font-style: italic;
+            font-weight: bold;
+            /* transition-property: background-color;
+            transition-duration: 0.5s;
+            transition-timing-function: ease;
+            transition-delay: 0s; */
+            /* transition: all 0.5s ease 3s; */
+            transition: width 0.5s ease 0.5s;
+            /* transition: width 3s ease-in 4s; */
+            /*slow to fast with 4s delay*/
+            /* transition: width 3s ease-out;  fast to slow */
+            /* animation: animation-name duration timing-function delay iteration-count direction; */
+            animation: samiran-dance 0.5s ease 0.5s 100 normal;
+
+        }
+
+        #box1 {
+
+            animation: samiran-dance 0.5s ease 7s 100 normal;
+
+        }
+
+        @keyframes samiran-dance {
+            from {
+                width: 45px;
+            }
+
+            to {
+                width: 45vw;
+            }
+        }
+
+
+        .button {
+            background-color: brown;
+            font-style: italic;
+            color: azure;
+        }
+
+        .button:hover {
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div><button class="button"> Go-Back</button></div>
+    <div class="container">
+        <div class="box" id = "box1">box1</div>
+        <div class="box">box2</div>
+        <div class="box">box3</div>
+        <div class="box">box4</div>
+        <div class="box">box5</div>
+    </div>
+</body>
+
+</html>

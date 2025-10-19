@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Rotate Y</title>
+    <style>
+        .container {
+            background-color: red;
+            width: 450px;
+            height: 70vh;
+            perspective: 600px;
+        }
+
+        .box {
+            width: 123px;
+            height: 123px;
+            background-color: beige;
+            margin: 5px;
+            transform: rotateY(45deg);
+            transform-style: preserve-3d;
+        }
+    </style>
+</head>
+
+<body>
+    <header>Rotates element in 3D space along Y-axis</header>
+
+    <div class="container">
+        <div class="box">Box 1</div>
+    </div>
+</body>
+
+</html>

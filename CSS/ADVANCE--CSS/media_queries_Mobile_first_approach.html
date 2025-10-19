@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container {
+            width: 100vw;
+            height: 80vh;
+            border: 2px solid red;
+            padding: 10px;
+            background-color: turquoise;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+
+        }
+
+        .box {
+            width: 40px;
+            height: 20px;
+            border: 2px solid blue;
+            margin: 10px;
+            padding: 25px;
+            background-color: lightpink;
+
+        }
+
+        /* Mobile-first (default) */
+        .container{
+            font-size: 14px;
+        }
+
+        /* Tablet and up */
+        @media (min-width: 768px) {
+            .container {
+                font-size: 16px;
+            }
+        }
+
+        /* Desktop and up */
+        @media (min-width: 1024px) {
+
+        .container {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">Box</div>
+        <div class="box">Box</div>
+        <div class="box">Box</div>
+        <div class="box">Box</div>
+    </div>
+</body>
+
+</html>

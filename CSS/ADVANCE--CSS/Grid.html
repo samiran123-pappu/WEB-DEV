@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+        .grid {
+
+            display: grid;
+            border: 2px solid red;
+            /* grid-template-columns:  1fr 3fr 1fr; */
+            /* grid-template-columns: 100px repeat(3, 1fr); */
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            /* grid-template-rows:  45px repeat(3, 1fr); */
+            /* row-gap: 20px;
+            column-gap: 30px; */
+            gap: 14px;
+            background-color: aqua;
+        }
+
+        .box {
+            background-color: rgb(33, 92, 33);
+            border: 2px solid red;
+
+        }
+        /* #box1 {
+            background-color: rgb(33, 92, 33);
+            border: 2px solid red;
+            grid-column: 1/3;
+            grid-row: 5/20;
+
+        } */
+        /* .box2 {
+            background-color: rgb(33, 92, 33);
+            border: 2px solid red;
+
+        }
+        .box3 {
+            background-color: rgb(33, 92, 33);
+            border: 2px solid red;
+
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="grid">
+        <div class="box"  id = "box1">i am a box1</div>
+        <div class="box" id = "box2">i am a box2</div>
+        <div class="box" id = "box3">i am a box3</div>
+        <div class="box">i am a box</div>
+        <div class="box">i am a box</div>
+
+    </div>
+</body>
+
+</html>

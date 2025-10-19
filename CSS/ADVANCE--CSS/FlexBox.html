@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex_Box</title>
+    <style>
+        * {
+            align-items: stretch;
+        }
+
+        .container {
+            width: 80vw;
+            height: 90vh;
+            border: 2px solid red;
+            /* padding: 6px; */
+            gap: 20px;
+            display: flex;
+
+            /* flex-direction: column; */
+            /* flex-direction: column-reverse; */
+            flex-direction: column;
+            /* flex-direction: row-reverse; */
+            /* flex-wrap: wrap; */
+            /* flex-wrap: nowrap; */
+            /* flex-wrap: wrap-reverse; */
+            /* flex-grow: 1; */
+            /* flex-grow: 1; */
+            /* flex-shrink:2 ; */
+            /* flex-basis: 12vw; */
+            /* flex: 1 2 100px; */
+            /* justify-content: center; */
+            justify-content: flex-start;
+            /* justify-content: flex-end; */
+            /* justify-content: space-around; */
+            /* justify-content: space-between; */
+            /* justify-content: space-evenly; */
+
+            /* align-items: center; */
+            /* align-items: flex-start; */
+            /* align-items: flex-end; */
+            /* align-items: center; */
+            /* align-items: stretch; */
+            /* align-items: baseline; */
+
+
+        }
+
+        .box {
+            /* width: 9vw;
+            height: 6vw; */
+            width: 100px;
+            height: 56px;
+            border: 2px solid green;
+            margin: 5px;
+            background-color: brown;
+            /* flex-grow: 1; */
+            /* flex-shrink:2 ; */
+            flex-shrink: 1;
+            /* flex-basis: 12vw; */
+            /* align-items: stretch; */
+
+
+        }
+
+
+
+        #box1 {
+            /* align-self: center; */
+            /* width: 10vw; */
+            align-items: stretch;
+
+
+            /* flex-grow: 1; */
+            /* flex-shrink: 5; */
+
+        }
+
+        /* #box_2 { */
+            /* flex-grow: 1; */
+            /* flex-shrink:2 ; */
+            /* flex-basis: 12vw; */
+            /* flex: 1 2 100px; */
+            /* flex: 1 2 10vw; */
+            /* width: 10vw; */
+            /* align-items: stretch; */
+
+
+        /* } */
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box" id="box1"> BOX_1</div>
+        <div class="box" id="box_2">BOX_2</div>
+        <div class="box">BOX_3</div>
+        <div class="box">BOX_4</div>
+        <div class="box">BOX_5</div>
+    </div>
+</body>
+
+</html>

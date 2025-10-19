@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animated Demo</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow-x: hidden;
+      font-family: Arial, sans-serif;
+    }
+    .hero {
+      width: 100vw;
+      height: 100vh;
+      background-image: url("https://via.placeholder.com/1920x1080");
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;  /* fill & fit the background image */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+    .boxes {
+      display: flex;
+      gap: 20px;
+    }
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: rgba(255,255,255,0.8);
+      border: 5px solid #333;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      color: #333;
+      cursor: pointer;
+    }
+    /* Animation 1: slide in from left */
+    @keyframes slide-in {
+      from { transform: translateX(-200px); opacity: 0; }
+      to   { transform: translateX(0);     opacity: 1; }
+    }
+    .box:nth-child(1) {
+      animation: slide-in 1s ease-out 0s forwards;
+    }
+    /* Animation 2: bounce & grow */
+    @keyframes bounce-grow {
+      0%   { transform: scale(0.5) translateY(200px); opacity:0; }
+      50%  { transform: scale(1.2) translateY(-30px); opacity:1; }
+      100% { transform: scale(1)   translateY(0);    opacity:1; }
+    }
+    .box:nth-child(2) {
+      animation: bounce-grow 1.2s ease-out 0.2s forwards;
+    }
+    /* Animation 3: rotate & color change */
+    @keyframes rotate-color {
+      0%   { transform: rotate(0deg); background-color: rgba(255,255,255,0.8); }
+      50%  { transform: rotate(180deg); background-color: rgba(200,230,255,0.9); }
+      100% { transform: rotate(360deg); background-color: rgba(255,255,255,0.8); }
+    }
+    .box:nth-child(3) {
+      animation: rotate-color 1.5s ease-in-out 0.4s forwards;
+    }
+    /* Animation 4: flip & fade */
+    @keyframes flip-fade {
+      from { transform: perspective(400px) rotateY(0deg); opacity: 0; }
+      to   { transform: perspective(400px) rotateY(180deg); opacity: 1; }
+    }
+    .box:nth-child(4) {
+      animation: flip-fade 1.3s ease 0.6s forwards;
+    }
+    /* Animation 5: scale up & shadow glow infinite */
+    @keyframes glow-pulse {
+      0%   { transform: scale(1);     box-shadow: 0 0 0px rgba(50,150,255,0); }
+      50%  { transform: scale(1.1);   box-shadow: 0 0 20px rgba(50,150,255,0.6); }
+      100% { transform: scale(1);     box-shadow: 0 0 0px rgba(50,150,255,0); }
+    }
+    .box:nth-child(5) {
+      animation: glow-pulse 2s ease-in-out 0.8s infinite;
+    }
+
+    /* Hover effect for all boxes */
+    .box:hover {
+      transform: scale(1.2);
+      transition: transform 0.3s ease;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="hero">
+    <div class="boxes">
+      <div class="box">Box 1</div>
+      <div class="box">Box 2</div>
+      <div class="box">Box 3</div>
+      <div class="box">Box 4</div>
+      <div class="box">Box 5</div>
+    </div>
+  </div>
+
+</body>
+</html>

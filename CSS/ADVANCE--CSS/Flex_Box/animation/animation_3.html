@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Retro Jump & Twist</title>
+  <style>
+    body, html {
+      margin:0; padding:0; width:100%; height:100%;
+      display:flex; align-items:center; justify-content:center;
+      background: #f0e4d7;
+      font-family: 'Courier New', monospace;
+    }
+    .container {
+      display:flex; gap:15px;
+    }
+    .box {
+      width:90px; height:90px;
+      background:#d14;
+      color:#fff;
+      display:flex; align-items:center; justify-content:center;
+      font-size:1rem; font-weight:bold;
+      text-transform:capitalize;
+      animation: jump-twist 1.8s ease-in-out 0s infinite;
+    }
+    .box:nth-child(2) {
+      animation-delay:0.4s;
+    }
+    .box:nth-child(3) {
+      animation-delay:0.8s;
+    }
+    @keyframes jump-twist {
+      0%   { transform: translateY(0) rotate(0deg); background:#d14; }
+      30%  { transform: translateY(-50px) rotate(-20deg); background:#e42; }
+      60%  { transform: translateY(0) rotate(20deg); background:#d14; }
+      100% { transform: translateY(0) rotate(0deg); background:#d14; }
+    }
+    .box:hover {
+      animation-play-state: paused;
+      transform: scale(1.2);
+      transition: transform 0.2s ease;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box">jump</div>
+    <div class="box">twist</div>
+    <div class="box">spin</div>
+  </div>
+</body>
+</html>

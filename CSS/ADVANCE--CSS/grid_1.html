@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        .container {
+            display: grid;
+            grid-template-areas:
+                "header header"
+                "sidebar content"
+                "footer footer";
+            grid-template-columns: 1fr 3fr;
+            grid-template-rows: auto 1fr auto;
+            gap: 10px;
+        }
+        .header {
+            grid-area: header;
+            background: #ddd;
+        }
+        .sidebar {
+            grid-area: sidebar;
+            background: #bbb;
+        }
+        .content {
+            grid-area: content;
+            background: #eee;
+        }
+        .footer {
+            grid-area: footer;
+            background: #ccc;
+        }
+        .item {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item header">Header</div>
+        <div class="item sidebar">Sidebar</div>
+        <div class="item content">Content</div>
+        <div class="item footer">Footer</div>
+    </div>
+</body>
+</html>

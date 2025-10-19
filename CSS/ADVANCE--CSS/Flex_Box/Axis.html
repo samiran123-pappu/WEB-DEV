@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flex Axis Demo — Bigger Containers</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: #f0f4f8;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    align-items: center;
+  }
+
+  h1 {
+    text-align: center;
+    color: #333;
+  }
+
+  .container {
+    display: flex;
+    border: 3px dashed #ff4d4d;
+    background: white;
+    padding: 10px;
+    gap: 10px;
+    justify-content: flex-start; /* default, overridden by classes */
+    align-items: flex-start;    /* default, overridden by classes */
+  }
+
+  .box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: white;
+    border-radius: 8px;
+    font-size: 1em;
+    width: 50px;   /* smaller inner boxes */
+    height: 50px;  /* smaller inner boxes */
+  }
+
+  .b1 { background: #3498db; }
+  .b2 { background: #e74c3c; }
+  .b3 { background: #2ecc71; }
+
+  /* Flex directions */
+  .row { flex-direction: row; } 
+  .row-reverse { flex-direction: row-reverse; } 
+  .column { flex-direction: column; } 
+  .column-reverse { flex-direction: column-reverse; } 
+
+  /* Justify content */
+  .jc-start { justify-content: flex-start; }
+  .jc-center { justify-content: center; }
+  .jc-end { justify-content: flex-end; }
+  .jc-space-between { justify-content: space-between; }
+
+  /* Align items */
+  .ai-start { align-items: flex-start; }
+  .ai-center { align-items: center; }
+  .ai-end { align-items: flex-end; }
+  .ai-stretch { align-items: stretch; }
+
+  /* Container size */
+  .tall { height: 300px; }  /* bigger containers for visualization */
+  .wide { width: 500px; }   /* wider containers */
+  
+  .text-note {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 8px;
+    font-style: italic;
+  }
+</style>
+</head>
+<body>
+
+<h1>Flexbox Axis Demo — Big Containers, Small Boxes</h1>
+
+<!-- ROW -->
+<div class="text-note">
+  Flex direction: <b>row</b> → main axis horizontal (0 at left), cross axis vertical.<br>
+  <b>justify-content</b> moves items along main axis (horizontal), <b>align-items</b> moves items along cross axis (vertical).
+</div>
+<div class="container row wide tall jc-start ai-center">
+  <div class="box b1">1</div>
+  <div class="box b2">2</div>
+  <div class="box b3">3</div>
+</div>
+
+<div class="text-note">
+  Flex direction: <b>row</b>, main axis horizontal.<br>
+  justify-content: <b>space-between</b> → items spread horizontally. <br>
+  align-items: <b>flex-end</b> → items aligned to bottom (cross axis).
+</div>
+<div class="container row wide tall jc-space-between ai-end">
+  <div class="box b1">1</div>
+  <div class="box b2">2</div>
+  <div class="box b3">3</div>
+</div>
+
+<!-- COLUMN -->
+<div class="text-note">
+  Flex direction: <b>column</b> → main axis vertical (0 at top), cross axis horizontal.<br>
+  justify-content moves items vertically, align-items moves items horizontally.
+</div>
+<div class="container column wide tall jc-start ai-center">
+  <div class="box b1">1</div>
+  <div class="box b2">2</div>
+  <div class="box b3">3</div>
+</div>
+
+<div class="text-note">
+  Flex direction: <b>column-reverse</b> → main axis vertical (0 at bottom).<br>
+  justify-content: <b>center</b> → items vertically centered.<br>
+  align-items: <b>flex-end</b> → items aligned to right (cross axis).
+</div>
+<div class="container column-reverse wide tall jc-center ai-end">
+  <div class="box b1">1</div>
+  <div class="box b2">2</div>
+  <div class="box b3">3</div>
+</div>
+
+</body>
+</html>

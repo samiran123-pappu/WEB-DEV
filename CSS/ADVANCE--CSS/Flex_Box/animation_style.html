@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition</title>
+    <style>
+        .container {
+
+            border: 5px solid green;
+            width: 40vw;
+            height: 80vh;
+            margin: 20px;
+            /* height:70vh; */
+            /* background-color: azure; */
+            /* padding: 40px; */
+            /* background-color: darkgrey; */
+
+
+        }
+
+        #dix1 {
+            background-image: url("https://i.pinimg.com/736x/e0/52/73/e05273e74cca0dfcdf56602dc70fa421.jpg");
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+        }
+
+        .box {
+
+            border: 7px solid yellow;
+            width: 80px;
+            height: 40px;
+            margin: 20px;
+            background-color: blueviolet;
+            color: lawngreen;
+            font-style: italic;
+            font-weight: bold;
+            /* transition-property: width;
+            transition-duration: 0.5s;
+            transition-timing-function: ease;
+            transition-delay: 0s; */
+            /* transition: all 0.5s ease 3s; */
+            transition: width 0.5s ease;
+            /* transition: width 3s ease-in 4s; */
+            /*slow to fast with 4s delay*/
+            /* transition: width 3s ease-out;  fast to slow */
+            /* animation: animation-name duration timing-function delay iteration-count direction; */
+            animation: samiran-dance 0.5s ease 0.2s 1000 normal;
+
+        }
+
+        /* @keyframes samiran-dance{
+            from {
+           width:45px;
+            }
+
+            to {
+               width:45vw;
+            }
+        } */
+
+
+        /* 
+
+        @keyframes samiran-dance {
+            0% {
+                background-color: red;
+            }
+
+            25% {
+                background-color: orange;
+            }
+
+            50% {
+                background-color: yellow;
+            }
+
+            75% {
+                background-color: green;
+            }
+
+            100% {
+                background-color: blue;
+            }
+        } */
+
+        /* @keyframes samiran-dance {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(300px);
+            }
+        } */
+
+
+        /* 
+        @keyframes samiran-dance {
+            from {
+                transform: translateY(0);
+            }
+
+            to {
+                transform: translateY(200px);
+            }
+        } */
+
+
+
+        /* @keyframes samiran-dance {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.5);
+            }
+        } */
+
+
+
+        /* @keyframes samiran-dance {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        } */
+        /* 
+
+        @keyframes samiran-dance {
+            0% {
+                background-color: blueviolet;
+            }
+
+            50% {
+                background-color: yellowgreen;
+            }
+
+            100% {
+                background-color: blueviolet;
+            }
+        }
+ */
+
+
+
+        /* 
+        @keyframes samiran-dance {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-50px);
+            }
+        } */
+
+        /* 
+        @keyframes samiran-dance {
+
+            0%,
+            100% {
+                transform: translateX(0);
+            }
+
+            25% {
+                transform: translateX(-10px);
+            }
+
+            75% {
+                transform: translateX(10px);
+            }
+        } */
+        /* 
+
+@keyframes samiran-dance {
+    from { transform: translate(0, 0); }
+    to { transform: translate(150px, 150px); }
+} */
+
+
+        @keyframes samiran-dance {
+            0% {
+                transform: scaleX(1) skewX(0deg);
+                background-color: blueviolet;
+            }
+
+            25% {
+                transform: scaleX(1.2) skewX(10deg);
+                background-color: mediumorchid;
+            }
+
+            50% {
+                transform: scaleX(0.8) skewX(-10deg);
+                background-color: rebeccapurple;
+            }
+
+            75% {
+                transform: scaleX(1.3) skewX(5deg);
+                background-color: slateblue;
+            }
+
+            100% {
+                transform: scaleX(1) skewX(0deg);
+                background-color: blueviolet;
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        .button {
+            background-color: brown;
+            font-style: italic;
+            color: azure;
+        }
+
+        .button:hover {
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div><button class="button"> Go-Back</button></div>
+    <div class="container" id="dix1">
+        <div class="box">box1</div>
+        <div class="box">box2</div>
+        <div class="box">box3</div>
+        <div class="box">box4</div>
+        <div class="box">box5</div>
+    </div>
+</body>
+
+</html>
