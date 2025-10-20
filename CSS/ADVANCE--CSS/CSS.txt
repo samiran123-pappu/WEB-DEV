@@ -1,3 +1,105 @@
+🎨 CSS PROPERTIES — ONE PAGE MASTER NOTE
+
+🌈 BACKGROUND PROPERTIES
+background-color: red;                     /* sets background color */
+background-image: url("image.jpg");        /* sets background image */
+background-repeat: no-repeat;              /* repeat | repeat-x | repeat-y | no-repeat */
+background-size: cover;                    /* cover | contain | auto | width height */
+background-position: center;               /* left | right | top | bottom | center */
+background-attachment: fixed;              /* fixed | scroll | local */
+background: red url("img.jpg") no-repeat center/cover;  /* shorthand */
+
+🧱 BORDER PROPERTIES
+border: 5px solid red;                     /* shorthand: width style color */
+border-width: 5px 10px 15px 20px;          /* top | right | bottom | left */
+border-style: solid dashed double dotted;  /* styles */
+border-color: red green blue orange;       /* colors */
+border-radius: 10px;                       /* rounded corners */
+border-top / border-right / border-bottom / border-left
+
+📦 PADDING PROPERTIES
+padding: 10px;                             /* all sides */
+padding: 10px 20px;                        /* top-bottom | left-right */
+padding: 10px 20px 30px;                   /* top | left-right | bottom */
+padding: 10px 20px 30px 40px;              /* top | right | bottom | left */
+padding-top / padding-right / padding-bottom / padding-left
+
+📏 MARGIN PROPERTIES
+margin: 10px;                              /* all sides */
+margin: 10px 20px;                         /* top-bottom | left-right */
+margin: 10px 20px 30px;                    /* top | left-right | bottom */
+margin: 10px 20px 30px 40px;               /* top | right | bottom | left */
+margin-top / margin-right / margin-bottom / margin-left
+margin: auto;                              /* centers block horizontally */
+
+🔠 FONT & TEXT PROPERTIES
+font-family: Arial, sans-serif;            /* text font */
+font-size: 16px;                           /* size of text */
+font-weight: bold;                         /* normal | bold | bolder | lighter | number */
+font-style: italic;                        /* normal | italic | oblique */
+font-variant: small-caps;                  /* small caps text */
+font: italic small-caps bold 16px Arial;   /* shorthand */
+color: blue;                               /* text color */
+text-align: center;                        /* left | right | center | justify */
+text-decoration: underline;                /* none | underline | overline | line-through */
+text-transform: uppercase;                 /* uppercase | lowercase | capitalize */
+letter-spacing: 2px;                       /* space between letters */
+word-spacing: 5px;                         /* space between words */
+line-height: 1.5;                          /* height of line */
+text-shadow: 2px 2px 5px gray;             /* x-offset | y-offset | blur | color */
+
+📐 WIDTH & HEIGHT
+width: 200px;                              /* element width */
+height: 100px;                             /* element height */
+max-width / min-width / max-height / min-height
+
+🧭 POSITION PROPERTIES
+position: static | relative | absolute | fixed | sticky;
+top: 20px; left: 30px; right: 40px; bottom: 10px;
+z-index: 2;                                /* stack order */
+
+⚙️ DISPLAY & VISIBILITY
+display: block | inline | inline-block | flex | grid | none;
+visibility: visible | hidden;
+overflow: hidden | scroll | auto | visible;
+
+🎯 FLEXBOX BASICS
+display: flex;
+justify-content: center;                   /* left-right alignment */
+align-items: center;                       /* top-bottom alignment */
+flex-direction: row | column | row-reverse | column-reverse;
+flex-wrap: wrap | nowrap;
+gap: 10px;                                 /* space between flex items */
+
+🧩 TRANSFORM & ANIMATION
+transform: translate(50px, 100px);         /* move */
+transform: rotate(45deg);                  /* rotate */
+transform: scale(1.5);                     /* zoom */
+transform: skew(30deg, 10deg);             /* slant */
+transition: all 1s ease;                   /* smooth change */
+@keyframes moveBox {
+  from { transform: translateX(0); }
+  to { transform: translateX(200px); }
+}
+animation: moveBox 2s infinite alternate;
+
+💡 OTHER USEFUL PROPERTIES
+opacity: 0.8;                              /* transparency */
+cursor: pointer;                           /* mouse cursor type */
+box-shadow: 5px 5px 10px gray;             /* shadow around box */
+outline: 2px solid red;                    /* line outside border */
+clip-path: circle(50%);                    /* crop shape */
+filter: blur(2px) brightness(1.2);         /* visual filter effects */
+object-fit: cover;                         /* fit images in container */
+
+✅ REMEMBER:
+- margin → space outside
+- padding → space inside
+- border → visible outline
+- background → behind content
+- font/text → styling text
+- transform/animation → motion effects
+
 🌈 CSS BORDER, PADDING & MARGIN — ONE PAGE NOTE
 
 🧱 BORDER  
@@ -184,4 +286,5 @@ outline: 2px solid blue;
 clip-path: circle(50%);
 filter: blur(5px);
 content: "→";
+
 
