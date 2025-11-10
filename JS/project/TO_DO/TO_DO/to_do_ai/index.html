@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <section class="todo-app">
+            <header class="todo-header">
+                <h1>My Todo List</h1>
+                <p class="subtitle">Stay organized and productive every day</p>
+            </header>
+
+            <div class="todo-input-container">
+                <input 
+                    type="text" 
+                    id="todoInput" 
+                    class="todo-input" 
+                    placeholder="Add a new task..." 
+                    autocomplete="off"
+                    aria-label="Add a new todo"
+                >
+                <button id="addTodoBtn" class="add-btn" aria-label="Add todo">Add</button>
+            </div>
+
+            <nav class="filter-container" aria-label="Todo filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="active">Active</button>
+                <button class="filter-btn" data-filter="completed">Completed</button>
+            </nav>
+
+            <ul id="todoList" class="todo-list" aria-live="polite">
+                <!-- Todos will be dynamically injected here -->
+            </ul>
+
+            <footer class="todo-footer">
+                <span id="itemsLeft" class="items-left">0 items left</span>
+                <button id="clearCompletedBtn" class="clear-completed">Clear Completed</button>
+            </footer>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
