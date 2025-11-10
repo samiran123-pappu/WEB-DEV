@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        let score = 0;
+        score = 10;
+        console.log(typeof score)
+
+        const pi = 3.14159;
+        // pi = 3.14; Error
+
+
+
+
+        // let name = "Harry"; // string
+        // let age = 25; // number
+        // let isCool = true; // boolean
+        // let noValue = null; // null
+        // let notDefined; // undefined
+
+
+
+        let person = { name: "Harry", age: 25 }; // Object
+        let colors = ["red", "blue", "green"]; // Array
+        let greet = function () { console.log("Hi") }; // Function
+
+
+
+
+        let a = 10;
+        let b = a; // Copy by value
+        // b = 20;
+        // b = 20
+        a = 20
+        console.log(a); // 10 (unchanged)
+        console.log(b)
+
+
+        // a = 5  .py
+        // b = a
+        // print(a)
+        // print(b)
+
+
+
+        let obj1 = { x: 1 };
+        let obj2 = obj1; // Copy by reference
+        // obj1.x = 2;
+        obj2.x = 2;
+        console.log(obj1.x); // 2 (both point to same object)
+        console.log(obj2.x); // 2 (both point to same object)
+
+
+        // a = [1, 2, 3] .py
+        // b = a
+        // b.append(4)
+        // print(a)
+        // print(b)
+
+
+
+
+
+        console.log(typeof "Hello"); // string
+        console.log(typeof 100); // number
+        console.log(typeof true); // boolean
+        console.log(typeof undefined); // undefined
+        console.log(typeof null); // object (quirk!)
+        console.log(typeof {}); // object
+        console.log(typeof []); // object (array is also object)
+        console.log(typeof function () { });// function
+
+
+
+
+
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables in javascript</title>
+
+
+
+    <script>
+        console.log("hello")
+        console.log(67)
+        a = 89
+        console.log(a)
+        b = "pappu"
+        console.log(b)
+        b = "tre"
+        console.log(b)
+        a = "hi"
+        console.log(a)
+        let name = "pappu"
+        console.log(name)
+
+        let number = 34
+        console.log(number)
+        let number_ = 45
+        console.log(number_)
+
+        let k = 9
+        console.log(k)
+
+        k = 89
+        console.log(k)
+        const p = 8
+        console.log(p)
+
+
+        // PRIMITIVE TYPES
+        let name_1 = "Samiran";   // String
+        let age = 21;            // Number
+        let isStudent = true;    // Boolean
+        let score = null;        // Null
+        let unassigned;          // Undefined
+        let bigNumber = 12345678901234567890n; // BigInt
+        let symbol1 = Symbol("id"); // Symbol
+
+        console.log(name_1);       // Samiran
+        console.log(age);        // 21
+        console.log(isStudent);  // true
+        console.log(score);      // null
+        console.log(unassigned); // undefined
+        console.log(bigNumber);  // 12345678901234567890n
+        console.log(symbol1);    // Symbol(id)
+
+
+
+        let a_ = 10;
+        let b_ = a; // copy by value
+        b_ = 20;
+        console.log(a_); // 10 (unchanged)
+        console.log(b_); // 20
+
+
+        // . Non-Primitive (Reference) Data Types
+
+        let person = { name: "Pappu", age: 21 }; // Object
+        let anotherPerson = person;
+        anotherPerson.age = 22;
+
+        console.log(person.age);       // 22 (changed)
+        console.log(anotherPerson.age); // 22 (same object)
+
+        let colors = ["red", "blue", "green"]; // Array
+        colors.push("yellow");
+        console.log(colors); // ["red", "blue", "green", "yellow"]
+
+        let greet = function () {
+            console.log("Hi from JS!");
+        };
+        greet(); // Output: Hi from JS!
+
+
+
+        // VAR Example
+        var x = 10;
+        console.log(x); // 10
+        var x = 20; // redeclared
+        x = 30;     // reassigned
+        console.log(x); // 30
+
+        // LET Example
+        let y = 40;
+        console.log(y); // 40
+        // let y = 50; ❌ Error (cannot redeclare)
+        y = 60; // ✅ can reassign
+        console.log(y); // 60
+
+        // CONST Example
+        const z = 70;
+        console.log(z); // 70
+        // z = 80; ❌ Error (cannot reassign)
+        // const z = 90; ❌ Error (cannot redeclare)
+
+
+
+
+        // 🔹 Hoisting Example
+
+
+        console.log(a1); // undefined (var is hoisted)
+        var a1 = 10;
+
+        // console.log(b1); // ❌ ReferenceError (let is hoisted but not initialized)
+        // let b1 = 20;
+
+        // console.log(c1); // ❌ ReferenceError (const is hoisted but not initialized)
+        // const c1 = 30;
+
+
+        // 🔹 Block Scope Example
+
+        {
+            var a = 1;  // function or global scoped
+            let b = 2;  // block scoped
+            const c = 3; // block scoped
+        }
+
+        console.log(a); // 1 (accessible outside block)
+        // console.log(b); // ❌ Error (not accessible)
+        // console.log(c); // ❌ Error (not accessible)
+
+        const user = { name: "Samiran", age: 21 };
+        user.age = 22; // allowed
+        console.log(user); // { name: "Samiran", age: 22 }
+
+        // ❌ user = { name: "New" } // not allowed (cannot reassign reference)
+
+        const numbers = [1, 2, 3];
+        numbers.push(4); // allowed
+        console.log(numbers); // [1, 2, 3, 4]
+
+
+    </script>
+</head>
+
+<body>
+    variables
+
+</body>
+
+</html>

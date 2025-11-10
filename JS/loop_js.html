@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOOP</title>
+
+
+    <script>
+for (let i = 0; i < 5; i++) {
+ console.log(i); 
+}
+
+
+let count = 0;
+while (count < 3) {
+ console.log(count); // prints 0, 1, 2
+ count++;
+}
+
+
+// loop_js.html:11 0
+// loop_js.html:11 1
+// loop_js.html:11 2
+// loop_js.html:11 3
+// loop_js.html:11 4
+// loop_js.html:17 0
+// loop_js.html:17 1
+// loop_js.html:17 2
+// let num1 = 0;
+// do {
+//  console.log(num1); // prints 0
+//  num1++;
+// } while (num1 < 1);
+
+// VM171:3 0
+// 0
+// let colors = ["red", "green", "blue"];
+// for (let color of colors) {
+//  console.log(color);
+// }
+
+// VM175:3 red
+// VM175:3 green
+// VM175:3 blue
+// undefined
+// let person = { name: "Alice", age: 30 };
+// for (let prop in person) {
+//  console.log(prop + ": " + person[prop]);
+// // prints "name: Alice" and then "age: 30"
+// }
+
+// VM179:3 name: Alice
+// VM179:3 age: 30
+// undefined
+// let age = 18;
+// if (age >= 18) {
+//  console.log("You are an adult");
+// } else if (age >= 13) {
+//  console.log("You are a teenager");
+// } else {
+//  console.log("You are a child");
+// }
+
+// VM206:3 You are an adult
+// undefined
+// let day = "Monday";
+// switch (day) {
+// case "Monday":
+//  console.log("Start of the week");
+// break;
+// case "Friday":
+//  console.log("End of the week");
+// break;
+//  default:
+//  console.log("Midweek day");
+// }
+
+// VM210:4 Start of the week
+// undefined
+// let day = "Friday";
+// switch (day) {
+// case "Monday":
+//  console.log("Start of the week");
+// break;
+// case "Friday":
+//  console.log("End of the week");
+// break;
+//  default:
+//  console.log("Midweek day");
+// }
+
+// VM225:7 End of the week
+// undefined
+// let day = "day";
+// switch (day) {
+// case "Monday":
+//  console.log("Start of the week");
+// break;
+// case "Friday":
+//  console.log("End of the week");
+// break;
+//  default:
+//  console.log("Midweek day");
+// }
+
+// VM229:10 Midweek day
+// undefined
+// for (let i = 1; i <= 5; i++) {
+//  console.log("Count:", i);
+// }
+// VM233:2 Count: 1
+// VM233:2 Count: 2
+// VM233:2 Count: 3
+// VM233:2 Count: 4
+// VM233:2 Count: 5
+// undefined
+// let i = 1;
+// while (i <= 3) {
+//  console.log("While loop:", i); i++;
+// }
+
+// VM239:3 While loop: 1
+// VM239:3 While loop: 2
+// VM239:3 While loop: 3
+// 3
+// let i = 1;
+// while (i <= 3) {
+//  console.log("While loop:", i); i++;
+// }
+
+// VM242:3 While loop: 1
+// VM242:3 While loop: 2
+// VM242:3 While loop: 3
+// 3
+// let i = 1;
+// while (i < 3) {
+//  console.log("While loop:", i); i++;
+// }
+
+// VM247:3 While loop: 1
+// VM247:3 While loop: 2
+// 2
+// let i = 1;
+// do {
+//  console.log("Do while:", i);
+//  i++;
+// } while (i <= 3);
+
+// VM251:3 Do while: 1
+// VM251:3 Do while: 2
+// VM251:3 Do while: 3
+// 3
+// for (let i = 1; i <= 5; i++) {
+// if (i === 3) continue; // skip 3
+//  console.log(i); // 1, 2, 4, 5
+// }
+
+// VM255:3 1
+// VM255:3 2
+// VM255:3 4
+// VM255:3 5
+// undefined
+// for (let i = 1; i < 5; i++) {
+// if (i === 3) continue; // skip 3
+//  console.log(i); // 1, 2, 4, 5
+// }
+
+// VM258:3 1
+// VM258:3 2
+// VM258:3 4
+// undefined
+// for (let i = 0; i < 10; i++) {
+// if (i === 5) {
+// break; // exits the loop when i equals 5
+// }
+//  console.log(i);
+// }
+
+// VM262:5 0
+// VM262:5 1
+// VM262:5 2
+// VM262:5 3
+// VM262:5 4
+// undefined
+// for (let i = 0; i < 10; i++) {
+// if (i % 2 === 0) {
+// continue; // skips even numbers
+// }
+//  console.log(i);
+// }
+
+// VM266:5 1
+// VM266:5 3
+// VM266:5 5
+// VM266:5 7
+// VM266:5 9
+// undefined
+// for (let i = 0; i <= 10; i++) {
+// if (i % 2 === 0) {
+// continue; // skips even numbers
+// }
+//  console.log(i);
+// }
+
+// VM271:5 1
+// VM271:5 3
+// VM271:5 5
+// VM271:5 7
+// VM271:5 9
+// undefined
+// for (let i = 0; i <= 15 i++) {
+// if (i % 2 === 0) {
+// continue; // skips even numbers
+// }
+//  console.log(i);
+// }
+
+// VM278:1 Uncaught SyntaxError: Unexpected identifier 'i'
+// [NEW] Explain Console errors by using Copilot in Edge: click
+         
+//          to explain an error. 
+//         Learn more
+//         Don't show again
+// for (let i = 0; i <= 10 i++) {
+// if (i % 2 === 0) {
+// continue; // skips even numbers
+// }
+//  console.log(i);
+// }
+
+// VM284:1 Uncaught SyntaxError: Unexpected identifier 'i'
+// for (let i = 0; i < 10; i++) {
+// if (i === 5) {
+// break; // exits the loop when i equals 5
+// }
+//  console.log(i);
+// }
+
+// VM287:5 0
+// VM287:5 1
+// VM287:5 2
+// VM287:5 3
+// VM287:5 4
+// undefined
+// for (let i = 0; i < 10; i++) {
+// if (i % 2 === 0) {
+// continue; // skips even numbers
+// }
+//  console.log(i);
+// }
+
+// VM291:5 1
+// VM291:5 3
+// VM291:5 5
+// VM291:5 7
+// VM291:5 9
+// undefined
+// for (let i = 0; i < 15; i++) {
+// if (i % 2 === 0) {
+// continue; // skips even numbers
+// }
+//  console.log(i);
+// }
+
+// VM295:5 1
+// VM295:5 3
+// VM295:5 5
+// VM295:5 7
+// VM295:5 9
+// VM295:5 11
+// VM295:5 13
+// undefined
+// for (let i = 0; i <= 15; i++) {
+// if (i % 2 === 0) {
+// continue; // skips even numbers
+// }
+//  console.log(i);
+// }
+
+// VM300:5 1
+// VM300:5 3
+// VM300:5 5
+// VM300:5 7
+// VM300:5 9
+// VM300:5 11
+// VM300:5 13
+// VM300:5 15
+// undefined
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
