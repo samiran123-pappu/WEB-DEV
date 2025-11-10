@@ -1,0 +1,98 @@
+nav ul li {
+  list-style-type: none;
+  padding: 0 20px;
+  font-size: 20px;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 40px;
+
+}
+
+nav ul {
+  display: flex;
+  gap: 23px;
+
+}
+
+nav {
+  background-color: rgb(219, 170, 223);
+  display: flex;
+  justify-content: space-around;
+  color: rgb(47, 48, 24);
+  padding: 20px;
+  height: 43px;
+  align-items: center;
+}
+
+
+label {
+  display: block;
+}
+
+form {
+  text-align: center;
+}
+
+h1,
+h2 {
+  text-align: center;
+}
+
+
+input[type="text"] {
+  width: 34vw;
+  height: 34px;
+
+}
+
+textarea {
+  width: 34vw;
+  height: 134px;
+
+
+}
+
+
+.card {
+  width: 133px;
+  height:133px;
+  background-color: blue;
+  color: white;
+  font-weight: bold;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 12px;
+  position:relative
+}
+
+.card .title {
+  text-align: center;
+  font-size: 22px;
+}
+
+
+.container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 70vw;
+}
+
+
+.notesSection{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 23px;
+}
+
+
+.del{
+  position:absolute;
+  right:5px;
+  cursor: pointer;
+}
